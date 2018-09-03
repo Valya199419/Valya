@@ -1,0 +1,89 @@
+<div>
+<div class="container">
+    <h2 style="color:white">Admin page</h2>
+
+
+    <form action = "http://localhost:8081/file_uploadPage" method = "POST" enctype="multipart/form-data">
+    </form>
+        <div class="form">
+
+            <div class="form-group">
+                <label for="condition"><h3>Condition:</h3></label>
+                <input ng-model="car.condition" type="text" class="form-control" id="condition" placeholder="Enter condition" name="condition">
+            </div>
+
+            <div class="form-group">
+                <label for="body"><h3>Body:</h3></label>
+                <input ng-model="car.body" type="text" class="form-control" id="body" placeholder="Enter Body" name="body">
+            </div>
+
+            <div class="form-group">
+                <label for="make"><h3>Make:</h3></label>
+                <input ng-model="car.make" type="text" class="form-control" id="make" placeholder="Enter Make" name="make">
+            </div>
+
+            <div class="form-group">
+                <label for="model"><h3>Model:</h3></label>
+                <input  ng-model="car.model" type="text" class="form-control" id="model" placeholder="Enter Model" name="model">
+            </div>
+
+            <div class="form-group">
+                <label for="year"><h3>Year:</h3></label>
+                <input ng-model="car.year" type="text" class="form-control" id="year" placeholder="Enter Year" name="year">
+            </div>
+
+            <div class="form-group">
+                <label for="tranmission"><h3>Tranmission:</h3></label>
+                <input ng-model="car.tranmission" type="text" class="form-control" id="tranmission" placeholder="Enter Tranmission" name="tranmission">
+
+
+            <h3>Picture:</h3>
+                <input type="file" name="inputCarPictureName" />
+        </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        </div>
+    </form>
+    <div>
+        <table border="3" style="background-color: lightgray">
+            <tr style="background-color: darkgray">
+                <td>Number</td>
+                <td>ID</td>
+                <td>Year</td>
+                <td>Make</td>
+                <td>Image</td>
+                <td>Condition</td>
+                <td>Body</td>
+                <td>Tranmission</td>
+                <td>Use Way</td>
+                <td>Price</td>
+                <td>Stars</td>
+                <td>Description</td>
+                <td>Action Edite</td>
+                <td>Action Delete</td>
+            </tr>
+            <tr ng-repeat="x in cars">
+                <td>{{ x.number }}</td>
+                <td>{{ x._id }}</td>
+                <td>{{ x.year }}</td>
+                <td>{{ x.make }}</td>
+                <td><img src="{{ x.image }}" style="height: 100px;width:150px;">{{ x.image }}</td>
+                <td>{{ x.condition }}</td>
+                <td>{{ x.body }}</td>
+                <td>{{ x.transmission }}</td>
+                <td>{{ x.useWay }}</td>
+                <td>{{ x.price }}</td>
+                <td>{{ x.stars }}</td>
+                <td>{{ x.description }}</td>
+                <td><a class="btn btn-success btn-sm" href="#" role="button" ng-click="editUser(x._id)">Edit</a></td>
+                <td><a class="btn btn-success btn-sm" href="#" role="button" ng-click="deleteUser(x._id)">Delete</a></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<!--
+<a ui-sref="edit({id:user._id})">Edit</a> |
+<a href="#" ng-click="deleteUser(user._id)">Delete</a>
+-->
