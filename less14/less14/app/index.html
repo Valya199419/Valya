@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- for icons__>
+<!-- for bootstrap 4 start-->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <!-- for bootstrap 4 end-->
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+<div class="container-fluid">
+  <div class="row ">
+    <div class="col-sm-1" style="background-color:black"></div>
+    <div class="col-sm-5"style="background-color:black"><p class="text-white mt-2"><i class="fa fa-map-marker m-r-lg-5"></i> <strong class="margin-top: 20px">AUTOSHOP</strong> - 123 HOLDING, BUSAN, KOREA</p></div>
+    <div class="col-sm-1"style="background-color:black"></div>
+    <div class="col-sm-1 " style="background-color:black">
+      <a href="#"><h6 class=center1" style="color: white;margin-top: 8px">ACCOUNT</h6></a>
+    </div>
+    <div class="col-sm-1 " style="background-color:black">
+      <a href="#"><h6 class=center1" style="color: white;margin-top: 8px">Wishlist(0)</h6></a>
+    </div>
+    <div class="col-sm-1 " style="background-color:black">
+      <a href="#"><h6 class=center1" style="color: white;margin-top: 8px">Checkout</h6></a>
+    </div>
+
+    <div class="col-sm-1"style="background-color:black"><i class="fa fa-shopping-basket" id="basket" style="margin-top: 20px"></i><span class="badge" style="margin-top: 10px">2</span></div>
+    <div class="col-sm-1" style="background-color:black">
+    </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+    </div>
+
+    <div id="triangle-bottomright"></div>
+    <div class="col-sm-4 text-white" style="background-color: red">
+      <p class="mt-3 center"> Need support? Call us:   <i class="fa fa-phone" style="font-size:16px;color:white"></i>0123-456-789</p>
+    </div>
+    <div id="triangle-bottomleft"></div>
+    <div class="col-sm-1">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <img src="carsImage/logo.png" style="background-color:black" class="img-thumbnail"  alt="Cinque Terre">
+    </div>
+
+    <div id="triangle-bottomleft-b"></div>
+    <div class="col-sm-1 red" style="background-color:black;height: 80px">
+      <a href="#!/home"><h6 class=center1" style="color: white;margin-top: 20px ; font-size: 12px">HOME</h6></a>
+    </div>
+    <div class="col-sm-2 red" style="background-color:black;height: 80px">
+      <a href="#!/CAR LISTING"><h6 class=center1" style="color: white;margin-top: 20px; font-size: 12px">CAR LISTING</h6></a>
+    </div>
+    <div class="col-sm-1 red" style="background-color:black;height: 80px">
+      <a href="#!/products"><h6 class=center1" style="color: white;margin-top: 20px; font-size: 12px">PRODUCT</h6></a>
+    </div>
+    <div class="col-sm-1 red" style="background-color:black;height: 80px">
+      <a href="#"><h6 class=center1" style="color: white;margin-top: 20px; font-size: 12px">PAGES</h6></a>
+    </div>
+    <div class="col-sm-2 red" style="background-color:black;height: 80px">
+      <a href="#"><h6 class=center1" style="color: white;margin-top: 20px; font-size: 12px">CONTACT US</h6></a>
+    </div>
+      <div class="input-group col-sm-2" style="background-color: black;height: 80px">
+          <input class="form-control text-white py-2 mt-4" type="search" style="background-color: gray;margin-bottom: 5px; width: 25px; height: 15px" placeholder="Search" id="example-search-input">
+          <span class="input-group-append">
+                            <button class="btn btn-outline-secondary mt-4 icon-search" style="margin-bottom: 5px ;color: black; width: 35px; height: 35px" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+      </div>
+
+    </div>
+  </div>
+</div>
+<br>
+<body style='background-image: url("carsImage/bmw.jpg");background-repeat: no-repeat;height: 100%;background-size: cover'>
+  <ul class="menu">
+    <!-- <li><a href="#!/view1">Home</a></li> -->
+
+
+
+
+
+  </ul>
+  </div>
+  </header>
+
+
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div ng-view class="ng-scope"></div>
+
+  <footer>
+    <div class="container" style= "background-color:#1a1a1a ">
+      <div class="row">
+        <div class="col-sm-4 text-white" style="padding-bottom: 20px;">
+          <h3 style="margin-bottom:15px ">COMPANY INFO</h3>
+          <div class="row"style="margin-bottom:25px">
+            <div class="col-sm-4"style="border-bottom: solid 2px red"></div><div class="col-sm-7"  style="border-bottom: solid 2px gray"></div>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod temp incidunt ut .</p>
+          <p><p class="fa fa-signal"> 123 Holding, Busan, Korea</p></p>
+          &#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;
+          <p> <p class="fa fa-phone"> 0123-456-789 </p></p>
+          &#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;
+          <p><p class="fa fa-envelope-o" aria-hidden ="true"> Support@htmlcs.com</p></p>
+          &#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;
+          <i class="fa fa-globe" style="color:lightgray"> http://www.ndktheme.com</i>
+        </div>
+        <div class="col-sm-4 text-white">
+          <h3 style="margin-bottom:15px ">NEWSLETTER</h3>
+          <div class="row"style="margin-bottom:25px">
+            <div class="col-sm-4"style="border-bottom: solid 2px red"></div><div class="col-sm-7"  style="border-bottom: solid 2px gray"></div>
+          </div>
+          <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod temp incidunt ut</p>
+          <div class="form-group">
+            <input type="email"  id="email" name="email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn" style="background-color: red; width: 100px;height: 35px;padding-bottom: 50px "><h6><b>SUBSCRIBE</b></h6></button>
+          </div>
+        </div>
+        <div class="col-sm-4 text-white">
+          <h3 style="margin-bottom:15px ">QUICK LINK</h3>
+          <div class="row" style="margin-bottom:25px">
+            <div class="col-sm-4"style="border-bottom: solid 2px red"></div><div class="col-sm-7"  style="border-bottom: solid 2px gray"></div>
+          </div>
+          <p>&gt Privacy Policy</p>
+          &#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;
+          <p>&gt Community</p>
+          &#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;
+          <p>&gt Blog</p>
+          &#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;
+          <p>&gt Guide use</p>
+          &#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;&#x2212;
+          <p>&gt Our Servces</p>
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="container ">
+      <div class="row" style="background-color: black">
+
+        <div class="col-sm-6">
+          <h5 style="color:lightgray ">© 2016 DESIGNED BY <b style="color:red">T3THEME</b>. ALL RIGHTS RESERVED</h5>
+        </div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3" style="margin-top: 20px">
+          <i class= "fa fa-facebook"></i>
+          <i class= "fa fa-google"></i>
+          <i class= "fa fa-youtube"></i>
+          <i class= "fa fa-facebook"></i>
+        </div>
+
+
+      </div>
+    </div>
+  </footer>
+
+   <!-- In production use:
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/items.items.items/angular.min.js"></script>
+   -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="home/home.js"></script>
+  <script src="products/products.js"></script>
+  <script src="CAR LISTING/cars.js"></script>
+  <script src="fullDescription/fullDescription.js"></script>
+
+ <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

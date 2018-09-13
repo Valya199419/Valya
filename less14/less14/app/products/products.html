@@ -1,0 +1,29 @@
+<div ng-repeat="items in obj" style="padding: 5px">
+
+    <div  class="row" style= "background-color:#f2f2f2">
+        <div class="col-sm-8">
+            <img src="{{items.image}}" style="width: 350px; height: 250px; padding: 20px">
+        </div>
+        <div class="col-sm-4">
+
+            <div ><img src="{{items.stars}}"style="width: 45px;height: 15px"></div>
+            <h5 style="color:#cc3333">{{items.price | currency: "$" : 0}}</h5>
+            <p style="color:gray;cursor: pointer">{{items.description}}</p>
+            <div class="row">
+                <div class="left" style= "background-color:#d9d9d9"><h6 style= "color:#404040"><i class="fa fa-clock-o" style="font-size:5px;color:gray"></i>
+                    {{items.year}}</h6></div>
+                <div class="center" style= "background-color:#d9d9d9; margin-left: 2px"><h6 style= "color:#404040;"><i class="fa fa-tachometer" style="font-size:10px;color:gray"></i>
+                    {{items.transmission}}</h6></div>
+                <div class="right"style= "background-color:#d9d9d9; margin-left: 2px"><h6 style= "color:#404040;"><i class="fa fa-road" style="font-size:5px;color:gray"></i>
+                    {{items.useWay}}</h6></div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+

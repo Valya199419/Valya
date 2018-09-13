@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+        <!--&lt;!&ndash; <div class="row">-->
+        <form method = "POST" id="register">
+            <h2 class="cen">Register for insert cars</h2>
+            <div class="registerDiv">
+                <label>Year:</label>
+                <input type="number" ng-model=" car.year" id="year" name="year" placeholder="year" value="">
+                <label>IconYear:</label>
+                <input type="text" id="iconYear" name="iconYear" ng-model="car.iconYear" placeholder="iconYear" value="">
+                <label>Model:</label>
+                <input type="text" id="model" name="model" ng-model="car.model" placeholder="model" value="">
+                <label>Make:</label>
+                <input type="text" id="make" name="make" ng-model="car.make" placeholder="make" value="">
+                <label>Condition:</label>
+                <input type="text" id="condition" name="condition" ng-model="car.condition" placeholder="condition" value="">
+                <label>Body:</label>
+                <input type="text" id="body" name="body" ng-model="car.body" placeholder="body" value="">
+                <label>Icontransmission:</label>
+                <input type="text" id="icontransmission" ng-model="car.icontransmission" name="icontransmission" placeholder="icontransmission" value="">
+                <label>Transmission:</label>
+                <input type="text" id="transmission" ng-model="car.transmission" name="transmission" placeholder="transmission" value="">
+                <label>IconuseWay:</label>
+                <input type="number" id="useWay" name="useWay"ng-model="car.useWay" placeholder="useWay" value="">
+                <label>Price:</label>
+                <input type="number" id="price" name="price"ng-model="car.price" placeholder="price" value="">
+                <label>Description:</label>
+                <input type="text" id="description" name="description"ng-model="car.description" placeholder="description" value="">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input type="reset" value="reset" style="background-color:brown;border: none;height: 30px; border-radius: 100px;color: white">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="file" onchange="angular.element(this).scope().fileUpload(this)" />
+                        <button type="button" class="btn btn-primary ml-5" ng-click="send()">Click</button>
+
+                        <!--<button type="submit"  class="btn mt-1" ng-click="doSignUp()" style="width: 100%; background-color:brown;border: none;height: 30px; border-radius: 100px;color: white" id="saveButton">Save data</button>-->
+                        <button type="submit"  class="btn mt-1" ng-click="updateData()" style="width: 100%; background-color:brown;border: none;height: 30px; border-radius: 100px;color: white" id="editeButton">Update</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+            <form action = "http://localhost:8080/upload" method = "POST" enctype="multipart/form-data"><!-- upload@ papki anunn e-->
+                <input type="file" name="file" value="Choose file "/>
+                <input type='submit' value='Upload!' class="btn" />
+            </form>
+
+            <table border="2" style="background-color: darkgray">
+                <tr>
+                    <td>Mark</td>
+                    <td>Model</td>
+                    <td>Year</td>
+                    <td>Condition</td>
+                    <td>Body</td>
+                    <td>Tranmission</td>
+                    <td>UseWay</td>
+                    <td>Price</td>
+                    <td>Description</td>
+                    <td>Image</td>
+                    <td>Delete</td>
+                    <td>Edite</td>
+                </tr>
+
+                <tr ng-repeat="item in obj">
+                    <td>{{item.make}}</td>
+                    <td>{{item.model}}</td>
+                    <td>{{item.year}}</td>
+                    <td>{{item.condition}}</td>
+                    <td>{{item.body}}</td>
+                    <td>{{item.transmission}}</td>
+                    <td>{{item.useWay}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.description}}</td>
+                    <td><img src="img/{{item.img}}" style="height:300px; width: 400px"></td>
+                    <td><button style="background-color: red"  ng-click="delet(item._id)">Delete</button></td>
+                    <td><button style="background-color: #0fa940" ng-click="edite(item._id)">Edite</button></td>
+                </tr>
+            </table>
+        <img src = "carsImage/audi.jpg" style="margin-top: 10px;height: 700px">
+
+    </div>
+</div>
